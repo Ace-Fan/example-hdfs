@@ -16,15 +16,19 @@ public class TestHDFSClient {
 
 
         FileSystem fs = FileSystem.get(new URI("hdfs://localhost:9000"),conf,"root");
-
+        //创建目录
         //fs.create(new Path("/helloByJAVA"));
-
+        //fs.mkdirs(new Path(""));
+        //fs.delete(new Path(""),true);
+        fs.rename(new Path(""),new Path(""));
+        //下载
         //fs.copyToLocalFile(new Path("/helloByJAVA"),new Path("E://"));
-
+        //上传
         //Path src = new Path("");
         //Path dst = new Path("/");
         //fs.copyFromLocalFile(src,dst);
-
+        //列出文件
+        ///使用stream的形式操作
         fs.close();
     }
 }
